@@ -3,6 +3,14 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4abb40ad935bc9acfd2b651c4fe9f07b {
+                #map_866c465ffc0e26d7bceaa5a252c9b586 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -26,47 +34,24 @@
                 }
                 .leaflet-container { font-size: 1rem; }
             </style>
-
-            <style>html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            </style>
-
-            <style>#map {
-                position:absolute;
-                top:0;
-                bottom:0;
-                right:0;
-                left:0;
-                }
-            </style>
-
-            <script>
-                L_NO_TOUCH = false;
-                L_DISABLE_3D = false;
-            </script>
-
         
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_4abb40ad935bc9acfd2b651c4fe9f07b" ></div>
+            <div class="folium-map" id="map_866c465ffc0e26d7bceaa5a252c9b586" ></div>
         
 </body>
 <script>
     
     
-            var map_4abb40ad935bc9acfd2b651c4fe9f07b = L.map(
-                "map_4abb40ad935bc9acfd2b651c4fe9f07b",
+            var map_866c465ffc0e26d7bceaa5a252c9b586 = L.map(
+                "map_866c465ffc0e26d7bceaa5a252c9b586",
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 1,
+  "zoom": 3,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -78,7 +63,7 @@
 
         
     
-            var tile_layer_54545a7a9433f7c795cb6b17ab26db98 = L.tileLayer(
+            var tile_layer_92a5606359d7ac1bfc6b62994518d7a8 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -95,7 +80,32 @@
             );
         
     
-            tile_layer_54545a7a9433f7c795cb6b17ab26db98.addTo(map_4abb40ad935bc9acfd2b651c4fe9f07b);
+            tile_layer_92a5606359d7ac1bfc6b62994518d7a8.addTo(map_866c465ffc0e26d7bceaa5a252c9b586);
         
+    
+            var marker_8f9ec421a9ffab7ff1d07da3c6bd24be = L.marker(
+                [60.82956, 6.6796579],
+                {
+  "lazy": true,
+}
+            ).addTo(map_866c465ffc0e26d7bceaa5a252c9b586);
+        
+    
+        var popup_de673d9ab27c69ceb36f73e58b48f658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72b1a41862f71d11598cdc4ee4327c2d = $(`<div id="html_72b1a41862f71d11598cdc4ee4327c2d" style="width: 100.0%; height: 100.0%;">             <h1>View from Stalheim</h1>             <a href="geo:60.82956,6.6796579">                 <p>60.82956, 6.6796579</p>             </a>             <h2>Johan Christian Dahl, 1842</h2>             <h3>Oil on canvas, Romanticism</h3>             <a href=https://upload.wikimedia.org/wikipedia/commons/5/58/Johan_Christian_Claussen_Dahl_%E2%80%93_View_from_Stalheim_%E2%80%93_Google_Art_Project.jpg>                 <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Johan_Christian_Claussen_Dahl_%E2%80%93_View_from_Stalheim_%E2%80%93_Google_Art_Project.jpg/960px-Johan_Christian_Claussen_Dahl_%E2%80%93_View_from_Stalheim_%E2%80%93_Google_Art_Project.jpg style="width:50em;">             </a>             <p>nan</p></div>`)[0];
+                popup_de673d9ab27c69ceb36f73e58b48f658.setContent(html_72b1a41862f71d11598cdc4ee4327c2d);
+            
+        
+
+        marker_8f9ec421a9ffab7ff1d07da3c6bd24be.bindPopup(popup_de673d9ab27c69ceb36f73e58b48f658)
+        ;
+
+        
+    
 </script>
 </html>
